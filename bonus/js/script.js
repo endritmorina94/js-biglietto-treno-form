@@ -12,61 +12,35 @@ generateButton.addEventListener("click", function () {
     slider.className = slider.classList + " darker";
     ticketGenerator.className = ticketGenerator.classList + " darker";
 
+    var prezzoStandard = 1000;
 
     //Dichiaro delle varibili contententi il valore dei miei input
     var userName = document.getElementById("nome").value;
-    var userKm = parseInt(document.getElementById("km-user").value);
+    var userTime = parseInt(document.getElementById("anni-residenza").value);
     var userAge = document.getElementById("age-user").value;
-
-
-    //Imposto il prezzo standard
-    var prezzoStandard = 0.21;
-
-    //Imposto l'offerta standard
+    var userClass = parseInt(document.getElementById("class-user").value);
     var userOffer = "Prezzo standard";
 
 
     // Dichiaro il prezzo finale con la sua formula
-    var finalPrice = prezzoStandard * userKm;
+    var finalPrice = prezzoStandard * userTime * userClass;
 
-    //Controllo se il passeggio è in una fascia d'età nella quale devo applicargli sconti
     if (userAge == "minorenne"){
         userOffer = "Sconto minorenni";
-        finalPrice = finalPrice * 0.8;
+        finalPrice * 0.8;
     } else if (userAge == "over") {
         userOffer = "Sconto over 65";
-        finalPrice = finalPrice * 0.6;
+        finalPrice * 0.6;
     }
 
-    //Creo in modo randomico il numero del biglietto e della carrozza
     var userCode = Math.floor(Math.random() * (100000 - 90000) ) + 90000;
-    var userWagon = Math.floor(Math.random() * (101 - 1) ) + 1;
+    var userWagon = Math.floor(Math.random() * (1002 - 1) ) + 1;
 
-
-    //Stampo nel carrello i dettagli del biglietto
     document.getElementById("user-name").innerHTML = userName;
     document.getElementById("user-code").innerHTML = userCode;
     document.getElementById("user-wagon").innerHTML = userWagon;
     document.getElementById("user-offer").innerHTML = userOffer;
 
-    document.getElementById("final-price").innerHTML = finalPrice.toFixed(2) + "€";
+    document.getElementById("final-price").innerHTML = finalPrice;
 
-});
-
-// Indico il bottone annulla con una variabile
-var cancelButton = document.getElementById("cancel-button");
-
-//Quando il bottone annulla verrà cliccato...
-cancelButton.addEventListener("click", function() {
-    //Il carrello scompare
-    checkout.className = "right";
-
-    //Il resto si illumina di nuovo
-    slider.classList.toggle("darker");
-    ticketGenerator.classList.toggle("darker");
-
-    //Resetto gli input
-    document.getElementById("nome").value = "";
-    document.getElementById("km-user").value = "";
-    document.getElementById("age-user").value = "maggiornenne"
 });
