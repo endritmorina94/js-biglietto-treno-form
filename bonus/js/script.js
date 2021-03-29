@@ -25,6 +25,7 @@ generateButton.addEventListener("click", function () {
     // Dichiaro il prezzo finale con la sua formula
     var finalPrice = prezzoStandard * userTime * userClass;
 
+    //Controllo se il passeggero ha un'età per la quale devo applicargli sconti
     if (userAge == "minorenne"){
         userOffer = "Sconto minorenni";
         finalPrice = finalPrice * 0.8;
@@ -33,9 +34,12 @@ generateButton.addEventListener("click", function () {
         finalPrice = finalPrice * 0.6;
     }
 
+
+    //Credo due numeri random per numero del biglietto e carrozza
     var userCode = Math.floor(Math.random() * (100000 - 90000) ) + 90000;
     var userWagon = Math.floor(Math.random() * (1002 - 1) ) + 1;
 
+    //Stampo i dettagli del biglietto nel carrello
     document.getElementById("user-name").innerHTML = userName;
     document.getElementById("user-code").innerHTML = userCode;
     document.getElementById("user-wagon").innerHTML = userWagon;
