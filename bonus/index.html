@@ -46,32 +46,32 @@
 
 
            <div id="ticket-generator">
-               <div class="titolo mb-4">
+               <div class="titolo mb-5">
                    <h1>Snowpiercer</h1>
                    <h5>Wilford Industries</h5>
                </div>
 
-               <div class="info">
+               <div class="info mb-4">
                    <p>
                        Prenota ora il tuo posto per la salvezza dal gelo, sullo Snowpiercer lungo 1001 carrozze.
                    </p>
                </div>
 
                <div class="ticket">
-                   <div class="ticket-input">
+                   <div class="ticket-input mb-4">
                        <label for="nome">Nome Passegero</label><br>
-                       <input id="nome" type="text" name="" value="">
+                       <input id="nome" required type="text" name="" value="">
                    </div>
 
                    <div class="ticket-input">
                        <label for="anni-residenza">Anni di residenza</label><br>
-                       <input id="anni-residenza" type="number" name="" value="">
+                       <input id="anni-residenza" required type="number" name="" value="">
                    </div>
 
                    <div class="ticket-input">
                        <label for="age-user">Età Passegero</label><br>
-                       <select id="age-user" name="">
-                           <option disabled value="">Seleziona</option>
+                       <select id="age-user" required name="">
+                           <option disabled value="" selected="selected">Seleziona</option>
                            <option value="maggiorenne">Maggiorenne</option>
                            <option value="minorenne">Minorenne</option>
                            <option value="over">Over 65</option>
@@ -80,8 +80,8 @@
 
                    <div class="ticket-input mb-2">
                        <label for="class-user">Classe</label><br>
-                       <select id="class-user" name="">
-                           <option disabled value="">Seleziona</option>
+                       <select id="class-user" required name="">
+                           <option disabled value="" selected="selected">Seleziona</option>
                            <option value="1">Terza Classe</option>
                            <option value="1.5">Seconda Classe</option>
                            <option value="2">Prima Classe</option>
@@ -89,7 +89,7 @@
                    </div>
 
                    <div class="ticket-gen-row">
-                       <button class="my-btn" id="generate-button">Genera</button>
+                       <button class="my-btn" id="generate-button">GENERA</button>
                    </div>
                </div>
            </div>
@@ -103,14 +103,19 @@
                 </div>
 
                 <div class="info-ticket">
-                    <div>Nome passeggero: <span id="user-name"></span></div>
-                    <div>Codice identificativo: <span id="user-code"></span></div>
-                    <div>Carrozza: <span id="user-wagon">cc</span></div>
-                    <div>Tipo di sconto: <span id="user-offer"></span></div>
+                    <div>Nome passeggero: <br><span id="user-name"></span></div>
+                    <div>Codice identificativo: <br><span id="user-code"></span></div>
+                    <div>Carrozza: <br><span id="user-wagon">cc</span></div>
+                    <div>Tipo di sconto: <br><span id="user-offer"></span></div>
                 </div>
 
                 <div class="price">
-                    <h4 id="final-price"></h4>
+                    <h5>
+                        Totale: <span id="final-price"></span>
+                    </h5>
+                    <button class="my-btn pay">PAGA</button>
+                    <button class="my-btn cancel" id="cancel-button">Annulla</button>
+
                 </div>
 
 

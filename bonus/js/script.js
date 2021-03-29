@@ -27,10 +27,10 @@ generateButton.addEventListener("click", function () {
 
     if (userAge == "minorenne"){
         userOffer = "Sconto minorenni";
-        finalPrice * 0.8;
+        finalPrice = finalPrice * 0.8;
     } else if (userAge == "over") {
         userOffer = "Sconto over 65";
-        finalPrice * 0.6;
+        finalPrice = finalPrice * 0.6;
     }
 
     var userCode = Math.floor(Math.random() * (100000 - 90000) ) + 90000;
@@ -41,6 +41,25 @@ generateButton.addEventListener("click", function () {
     document.getElementById("user-wagon").innerHTML = userWagon;
     document.getElementById("user-offer").innerHTML = userOffer;
 
-    document.getElementById("final-price").innerHTML = finalPrice;
+    document.getElementById("final-price").innerHTML = finalPrice.toFixed(2) + "€";
 
+});
+
+// Indico il bottone annulla con una variabile
+var cancelButton = document.getElementById("cancel-button");
+
+//Quando il bottone annulla verrà cliccato...
+cancelButton.addEventListener("click", function() {
+    //Il carrello scompare
+    checkout.className = "right";
+
+    //Il resto si illumina di nuovo
+    slider.classList.toggle("darker");
+    ticketGenerator.classList.toggle("darker");
+
+    //Resetto gli input
+    document.getElementById("nome").value = "";
+    document.getElementById("anni-residenza").value = "";
+    document.getElementById("age-user").value = "";
+    document.getElementById("class-user").value = "";
 });

@@ -41,13 +41,18 @@
     transition: filter 1s;
 }
 
+.ticket-input{
+    display: inline-block;
+}
+
 .titolo{
     text-align: center;
 }
 
-
 .my-btn{
-    background-color: transparent;
+    background-color: rgb(91, 91, 91);
+    color: white;
+    font-weight: 500;
     border: 1px solid black;
     padding: 5px 10px;
     margin-top: 20px;
@@ -65,7 +70,32 @@
     position: absolute;
     top: 0;
     transition: left 1s;
+    color: rgba(0, 0, 0, 0.5);
 }
+
+
+#checkout span{
+    color: black;
+    font-weight: 500;
+}
+
+.titolo-check{
+    color: black;
+    margin-bottom: 40px;
+}
+
+.info-ticket div{
+    margin-bottom: 10px;
+}
+
+.my-btn.pay{
+    background-color: green;
+}
+
+.my-btn.cancel{
+    background-color: red;
+}
+
 
 .right{
     left: 100%;
