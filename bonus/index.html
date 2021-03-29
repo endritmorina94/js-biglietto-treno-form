@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Esercizio: generatore biglietto del treno</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -50,29 +52,30 @@
 
            <!-- DETTAGLI BIGLIETTO -->
            <div id="ticket-generator">
-               <div class="titolo mb-5">
-                   <h1>Snowpiercer</h1>
+               <div class="titolo pb-1">
+                   <h1>SNOWPIERCER</h1>
                    <h5>Wilford Industries</h5>
                </div>
 
-               <div class="info mb-4">
-                   <p>
-                       Prenota ora il tuo posto per la salvezza dal gelo sullo Snowpiercer, lungo 1001 carrozze.
-                   </p>
-               </div>
+               <div class="ticket pt-5">
 
-               <div class="ticket">
+                   <div class="info mb-4">
+                       <p>
+                           Prenota ora il tuo posto per la salvezza dal gelo sullo Snowpiercer, lungo 1001 carrozze.
+                       </p>
+                   </div>
+
                    <div class="ticket-input mb-4">
                        <label for="nome">Nome Passegero</label><br>
                        <input id="nome" required type="text" name="" value="">
                    </div>
 
-                   <div class="ticket-input">
+                   <div class="ticket-input anni">
                        <label for="anni-residenza">Anni di residenza</label><br>
                        <input id="anni-residenza" required type="number" name="" value="">
                    </div>
 
-                   <div class="ticket-input">
+                   <div class="ticket-input mb-3">
                        <label for="age-user">Età Passegero</label><br>
                        <select id="age-user" required name="">
                            <option disabled value="" selected="selected">Seleziona</option>
@@ -82,7 +85,7 @@
                        </select>
                    </div>
 
-                   <div class="ticket-input mb-2">
+                   <div class="ticket-input">
                        <label for="class-user">Classe</label><br>
                        <select id="class-user" required name="">
                            <option disabled value="" selected="selected">Seleziona</option>
