@@ -1,14 +1,17 @@
+body{
 
+}
 
 .big-container{
     width: 900px;
     height: 500px;
-    background-color: red;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 5px;
     overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .slider{
@@ -18,17 +21,24 @@
     display: flex;
     align-items: center;
     padding: 30px;
+    background-color: rgba(175, 175, 175, 0.6);
 }
 
 .ticket-generator{
     width: 450px;
     height: 500px;
-    background-color: blue;
+    background-color: white;
     float: left;
+    padding: 30px;
 }
 
 .my-slider img{
-    height: 440px;
+    height: 400px;
+}
+
+.carousel{
+    border: 20px solid white;
+
 }
 
 .checkout{
@@ -40,13 +50,22 @@
     left: 100%;
     transition: left 1s;
 }
-/*
-.big-container:hover .checkout{
-    left: calc(100% - 250px);
-} */
 
+.left{
+    left: calc(100% - 250px);
+}
 
 
 .titolo{
     text-align: center;
+}
+
+
+
+.btn{
+    background-color: transparent;
+    border: 1px solid grey;
+    padding: 5px 10px;
+    margin-top: 20px;
+    border-radius: 5px;
 }

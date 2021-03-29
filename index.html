@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Esercizio: cognomi con ciclo for</title>
+        <title>Esercizio: generatore biglietto del treno</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -46,42 +46,65 @@
 
 
            <div class="ticket-generator">
-               <div class="titolo">
+               <div class="titolo mb-4">
                    <h1>Snowpiercer</h1>
                    <h5>Wilford Industries</h5>
                </div>
 
+               <div class="info">
+                   <p>
+                       Prenota ora il tuo posto per la salvezza dal gelo, sullo Snowpiercer lungo 1001 carrozze.
+                   </p>
+               </div>
+
                <div class="ticket">
-                   <div class="ticket-input">
-                       <label for="nome">Nome</label><br>
+                   <div class="ticket-input mb-3">
+                       <label for="nome">Nome Passegero</label><br>
                        <input id="nome" type="text" name="" value="">
                    </div>
 
-                   <div class="ticket-input">
-                       <label for="km-utente">Km da percorrere</label><br>
+                   <div class="ticket-input mb-3">
+                       <label for="km-utente">Anni di residenza</label><br>
                        <input id="kilometri" type="number" name="" value="">
                    </div>
 
-                   <div class="ticket-input">
-                       <label for="age-user">Età</label><br>
+                   <div class="ticket-input mb-2">
+                       <label for="age-user">Classe</label><br>
                        <select id="age-user" name="">
                            <option disabled value="">Seleziona</option>
-                           <option value="minorenne">Minorenne</option>
-                           <option value="maggiorenne">Maggiorenne</option>
-                           <option value="over">Over 65</option>
+                           <option value="terza">Terza Classe</option>
+                           <option value="seconda">Seconda Classe</option>
+                           <option value="prima">Prima Classe</option>
                        </select>
                    </div>
 
                    <div class="ticket-gen-row">
-                       <button id="generate-button">Genera</button>
-                       <button id="cancel-button">Annulla</button>
+                       <button class="btn" id="generate-button">Genera</button>
                    </div>
                </div>
            </div>
 
 
 
-           <div class="checkout"></div>
+           <div class="checkout">
+
+                <div class="titolo-check">
+                    <h2>Il tuo biglietto</h2>
+                </div>
+
+                <div class="info-ticket">
+                    <div>Nome passeggero: <span id="user-name"></span></div>
+                    <div>Codice identificativo: <span id="user-code"></span></div>
+                    <div>Carrozza: <span id="user-wagon"></span></div>
+                    <div>Tipo di sconto: <span id="user-offer"></span></div>
+                </div>
+
+                <div class="price">
+                    <h2 id="final-price"></h2>
+                </div>
+
+
+           </div>
 
         </div>
 
