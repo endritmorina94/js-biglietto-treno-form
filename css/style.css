@@ -73,6 +73,10 @@
     font-weight: 500;
 }
 
+.info-ticket {
+    margin-bottom: 40px;
+}
+
 .right {
     left: 100%;
 }
