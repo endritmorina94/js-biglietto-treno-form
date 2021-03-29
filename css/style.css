@@ -1,6 +1,3 @@
-body{
-
-}
 
 .big-container{
     width: 900px;
@@ -14,7 +11,8 @@ body{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.slider{
+/* SLIDER */
+#slider{
     width: 450px;
     height: 500px;
     float: left;
@@ -22,14 +20,7 @@ body{
     align-items: center;
     padding: 30px;
     background-color: rgba(175, 175, 175, 0.6);
-}
-
-.ticket-generator{
-    width: 450px;
-    height: 500px;
-    background-color: white;
-    float: left;
-    padding: 30px;
+    transition: filter 1s;
 }
 
 .my-slider img{
@@ -38,34 +29,51 @@ body{
 
 .carousel{
     border: 20px solid white;
-
 }
 
-.checkout{
-    width: 250px;
+/* TICKET GENERATOR */
+#ticket-generator{
+    width: 450px;
     height: 500px;
-    background-color: green;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    transition: left 1s;
+    background-color: white;
+    float: left;
+    padding: 30px;
+    transition: filter 1s;
 }
-
-.left{
-    left: calc(100% - 250px);
-}
-
 
 .titolo{
     text-align: center;
 }
 
 
-
-.btn{
+.my-btn{
     background-color: transparent;
-    border: 1px solid grey;
+    border: 1px solid black;
     padding: 5px 10px;
     margin-top: 20px;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* CHECKOUT */
+#checkout{
+    width: 250px;
+    height: 500px;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    transition: left 1s;
+}
+
+.right{
+    left: 100%;
+}
+
+.left{
+    left: calc(100% - 250px);
+}
+
+.darker{
+    filter: brightness(0.5);
 }
