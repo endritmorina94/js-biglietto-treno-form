@@ -52,7 +52,13 @@
     border-radius: 5px;
     cursor: pointer;
     color: white;
+    transition: background-color 1s;
 }
+
+.ticket .my-btn:hover{
+    background-color: rgb(28, 76, 115);
+}
+
 
 /* CHECKOUT */
 #checkout{
@@ -75,12 +81,25 @@
     left: 100%;
 }
 
+
+.my-btn.pay{
+    background-color: green;
+}
+
+.my-btn.pay:hover{
+    background-color: white;
+    border: 1px solid green;
+    color: green;
+}
+
 .my-btn.cancel{
     background-color: red;
 }
 
-.my-btn.pay{
-    background-color: green;
+.my-btn.cancel:hover{
+    background-color: white;
+    border: 1px solid red;
+    color: red;
 }
 
 .left{

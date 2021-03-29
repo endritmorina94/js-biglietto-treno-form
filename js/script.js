@@ -68,5 +68,5 @@ cancelButton.addEventListener("click", function() {
     //Resetto gli input
     document.getElementById("nome").value = "";
     document.getElementById("km-user").value = "";
-    document.getElementById("age-user").value = "maggiornenne";
+    document.getElementById("age-user").value = "";
 });
